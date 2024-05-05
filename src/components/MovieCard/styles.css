@@ -1,0 +1,64 @@
+.movie-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+}
+
+.movie-card-poster {
+  width: 100%;
+  height: 70%;
+  display: block;
+}
+
+.movie-card-info {
+  padding: 16px;
+}
+
+.movie-card-title {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+.movie-card-overview {
+  font-size: 14px;
+  color: #666;
+  height: 60px; /* Fixed height for consistent card size */
+  overflow: hidden; /* Hide overflow text */
+}
+
+.movie-card-release-date {
+  font-size: 12px;
+  color: #999;
+}
+
+
+.movie-card-header {
+  position: relative;
+}
+
+
+.movie-card-watchlist-btn {
+  position: absolute;
+  top: 0px;
+  right: 10px; /* Adjust as needed */
+  background: rgba(253, 32, 32, 0.7); /* Semi-transparent background */
+  border: none;
+  border-radius: 0 0 50%  50%  ;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.movie-card-watchlist-btn:hover {
+  background: rgba(155, 31, 31, 0.9); /* More opaque on hover */
+}

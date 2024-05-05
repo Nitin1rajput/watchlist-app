@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
+import ProtectedLayout from './ProtectedLayout';
+import { useAuth } from './context/AuthContext';
+
 import './App.css';
 
+import { routes } from './routes';
+
 function App() {
+  const { auth } = useAuth();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {routes.map((route, idx) => {
+          if (route.isPublic) {
+            return (
+              <Route
+                key={idx}
+                path={route.path}
+                element={auth.user ? <Navigate to='/' /> : <route.component />}
+              />
+            );
+          }
+          return (
+            <Route
+              key={idx}
+              path={route.path}
+              element={<ProtectedLayout>{<route.component />}</ProtectedLayout>}
+            />
+          );
+        })}
+      </Routes>
+    </Router>
   );
 }
 

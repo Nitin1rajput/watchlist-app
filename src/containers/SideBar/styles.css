@@ -1,0 +1,28 @@
+.sidebar {
+  width: 30%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgb(225, 225, 225);
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.sidebar-header {
+  padding: 1em;
+  text-align: center;
+}
+.sidebar-header .heading {
+  color: #ed3d3f;
+}
+
+.sidebar-home-btn {
+  margin: 24px 0;
+}
+.sidebar-home-btn button {
+  width: 100%;
+}
+
+.sidebar-profile {
+  padding: 1em;
+}

@@ -1,0 +1,20 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ed3c3f;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.icon-button:hover {
+  background-color: #b6282a;
+}
+
+.button-icon {
+  margin-right: 8px;
+}

@@ -1,0 +1,50 @@
+.profile-info-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  position: relative;
+}
+
+.avatar-container {
+  margin-right: 6px;
+}
+
+.profile-avatar {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+.username-container {
+  flex-grow: 1;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.menu-container {
+  cursor: pointer;
+  position: relative;
+}
+
+.three-dots {
+  font-size: 24px; /* Adjust size as needed */
+  line-height: 1;
+}
+
+.tooltip {
+    width: 100px;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 4px;
+}

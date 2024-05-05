@@ -1,0 +1,16 @@
+.main-header {
+  
+  padding: 24px;
+}
+.main-heading {
+  background: #fcfcfc; 
+  border: 1px solid #b46c6e;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
+.movie-list {
+  height: calc(100vh - 190px);
+  overflow-y: auto; 
+}
