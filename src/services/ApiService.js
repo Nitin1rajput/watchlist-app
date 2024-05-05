@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://www.omdbapi.com';
+const API_BASE_URL = process.env.REACT_APP_OMDB_BASE_URL;
 const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 const ApiService = {
